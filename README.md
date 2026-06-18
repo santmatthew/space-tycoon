@@ -44,13 +44,15 @@ python3 -m http.server 8000
 
 ## Deploy to GitHub Pages
 
-The workflow at `.github/workflows/pages.yml` deploys the site on every push to
-the working branch (and `main`). One-time setup in the repo:
+This is a static site served straight from the repo root, so it uses
+branch-based Pages (no build, no Actions workflow needed). One-time setup:
 
-1. **Settings → Pages → Source:** choose **GitHub Actions**.
-2. Push to the branch (or run the workflow manually via **Actions →
-   Deploy to GitHub Pages → Run workflow**).
-3. The published URL appears in the workflow run and under Settings → Pages.
+1. **Settings → Pages → Source:** choose **Deploy from a branch**.
+2. **Branch:** select `claude/space-logistics-game-5zqg8b` and folder **`/ (root)`**, then **Save**.
+3. Wait a minute or two — the published URL appears under Settings → Pages:
+   **https://santmatthew.github.io/space-tycoon/**
+
+Every push to that branch republishes automatically.
 
 ## Project structure
 
